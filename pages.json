@@ -1,0 +1,151 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+		"path" : "pages/login/login",
+		"style" : 
+		{
+			"enablePullDownRefresh" : false,
+			"navigationStyle": "custom"
+		}
+	},
+		{
+			"path" : "pages/home/home",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/mine/mine",
+			"style" : 
+			{
+				"navigationBarTitleText" : "Mine",
+				"enablePullDownRefresh" : false
+			}
+		},
+
+		{
+			"path" : "pages/chat/chat",
+			"style" : 
+			{
+				"navigationBarTitleText" : "ground",
+				"enablePullDownRefresh" : true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/redpackage/redpackage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%mine.redRecord%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path" : "pages/assetsRecord/assetsRecord",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%mine.balanceHistory%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path" : "pages/share/share",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%home.share%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path" : "pages/commission/commission",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%home.fund%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path" : "pages/modify/modify",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%mine.security%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path" : "pages/recharge/recharge",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%mine.recharge%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path" : "pages/withdraw/withdraw",
+			"style" : 
+			{
+				"navigationBarTitleText" : "%mine.withdrawal%",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "default"
+			}
+		}
+	],
+		
+	"tabBar": {
+		"color": "#C92F27",
+			"selectedColor": "#fff",
+			"borderStyle": "#C92F27",
+			"backgroundColor": "#FF3F32",
+			"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/img/home.png",
+				"selectedIconPath": "static/img/home_on.png",
+				"text": "%home.home%"
+			}, {
+				"pagePath": "pages/recharge/recharge",
+				"iconPath": "static/img/pay.png",
+				"selectedIconPath": "static/img/pay_on.png",
+				"text": "%mine.recharge%"
+			}, {
+				"pagePath": "pages/share/share",
+				"iconPath": "static/img/share.png",
+				"selectedIconPath": "static/img/share_on.png",
+				"text": "%home.share%"
+			}, {
+				"pagePath": "pages/commission/commission",
+				"iconPath": "static/img/money.png",
+				"selectedIconPath": "static/img/money_on.png",
+				"text": "%home.fund%"
+			}, {
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/img/me.png",
+				"selectedIconPath": "static/img/me_on.png",
+				"text": "%home.mine%"
+			}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#EFEFEF",
+		"backgroundColor": "#EFEFEF",
+		"navigationStyle": "custom"
+		
+	},
+	"uniIdRouter": {}
+}
