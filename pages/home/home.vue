@@ -62,7 +62,7 @@
 					<text>{{$t('home.balance')}}</text>
 				</view>
 			</view>
-		</view>
+		</view>  
 		<!-- 系统消息通知栏 -->
 		<view class="system-notice">
 			<image style="width: 30rpx;height: 30rpx;" src="../../static/img/notice.png"></image>
@@ -73,7 +73,8 @@
 					</view>
 				</view>
 			</view>
-		</view>
+		</view> 
+		<view class="main-bg" >		
 		<!-- 选项卡 -->
 		<view class="tab_choose">
 			<!-- 红包接龙 -->
@@ -85,7 +86,7 @@
 				<text>{{$t('home.myRed')}}</text>
 			</view>
 			<!--当没有代理的时候显示这个-->
-			<view class="jl_cl choose_active_left"  v-if="itemProxtList.length==0" >
+			<view class=" choose_active_double"  v-if="itemProxtList.length==0" >
 				<text style="text-align: center;">{{$t('home.redJieLong')}}</text>
 			</view>
 		</view>
@@ -132,12 +133,12 @@
 				</view>
 			</view>
 		</scroll-view>
+		</view>
 		<!--语言切换 -->
 		<u-picker :show="showLang" :columns="columns" keyName="label" :cancelText="$t('comm.cancel')"
 			:confirmText="$t('comm.confirm')" @confirm="changeLang" @cancel='showLang = false'
 			:defaultIndex='pickerDefaultIndex'>
 		</u-picker>
-
 	</view>
 </template>
 
@@ -231,7 +232,7 @@
 				}
 			},
 			// 语言切换
-			changeLang(a) {
+			changeLang(a) { 
 				this.showLang = false
 				this.langs = a.value[0].label
 				this.lang_key = a.value[0].key
@@ -342,12 +343,12 @@
 		background-image: url('../../static/img/bg.jpg');
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: cover;
+		background-size:auto 
 
 	}
 
 	.home-page {
-		padding-bottom: 20rpx;
+		padding-bottom: 20rpx; 
 	}
 
 	.toplog {
@@ -380,7 +381,7 @@
 		margin: 9px auto 0 auto;
 
 	}
-
+	 
 	.swiper-item {
 		/* #ifndef APP-NVUE */
 		display: flex;
@@ -470,6 +471,16 @@
 		line-height: 100rpx;
 		background-color: #FFEB92;
 		color: #FD664D;
+	}
+   .choose_active_double {
+		border-top-right-radius: 20rpx;
+		border-top-left-radius: 20rpx;
+		height: 100rpx;
+		width: 100%;
+		line-height: 100rpx;
+		background-color: #FFEB92;
+		color: #FD664D;
+		text-align: center;
 	}
 
 	.system-notice {
